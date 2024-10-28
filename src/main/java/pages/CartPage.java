@@ -17,6 +17,9 @@ public class CartPage extends Utils {
     private By inputZipCode = By.id("postal-code");
     private By continueBtn = By.cssSelector("#checkout_info_container > div > form > div.checkout_buttons > input");
     private By finishBtn = By.xpath("//*[text()=\"FINISH\"]");
+    private By succMsg = By.cssSelector("#checkout_complete_container > h2");
+    private By completeChkOut = By.cssSelector("#checkout_complete_container > div");
+    private By ponyExpressImg = By.cssSelector("#checkout_complete_container > img");
 
     public CartPage(WebDriver driver) {
         this.driver = driver;
@@ -61,6 +64,19 @@ public class CartPage extends Utils {
 
     public boolean verifyFinishButtonIsDisplayed() {
         isElementPresent(finishBtn);
+        return true;
+    }
+
+    public void placeOrder(){
+        navToCheckoutPage();
+        clickOnElement(finishBtn);
+    }
+    public String  getSuccessMessage(){
+        return driver.findElement(succMsg).getText();
+    }
+    public boolean isOrderCompleted(){
+        isElementPresent(completeChkOut);
+        isElementPresent(ponyExpressImg);
         return true;
     }
 }

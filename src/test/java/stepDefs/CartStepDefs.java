@@ -27,7 +27,6 @@ public class CartStepDefs {
 
     }
 
-
     @Then("I should see the correct total price and a Finish button")
     public void i_should_see_correct_total_price_and_finish_button() {
         double displayedTotalPrice = cartPage.getDisplayedTotalPrice();
@@ -35,7 +34,18 @@ public class CartStepDefs {
         Assert.assertTrue(cartPage.verifyFinishButtonIsDisplayed(),"Finish button is displayed");
 
     }
-
+    @And("I submit the order with all the required details")
+    public void iSubmitTheOrderWithAllTheRequiredDetails() {
+        cartPage.placeOrder();
+    }
+    @Then("I should see order been placed successfully")
+    public void i_should_see_order_been_placed_successfully() {
+    Assert.assertTrue(cartPage.isOrderCompleted(),"Order completed successfully");
+    }
+    @Then("I should see the Thank you message")
+    public void i_should_see_the_thank_you_message() {
+    Assert.assertEquals(cartPage.getSuccessMessage(),"THANK YOU FOR YOUR ORDER");
+    }
 
 }
 

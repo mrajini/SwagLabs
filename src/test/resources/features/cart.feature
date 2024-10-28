@@ -19,7 +19,7 @@ Feature: Cart Functionality for SwagLabs E-commerce Website
       | Sauce Labs Bike Light | Test.allTheThings() T-Shirt (Red) | Sauce Labs Fleece Jacket |
       | Sauce Labs Onesie     | Test.allTheThings() T-Shirt (Red) |                          |
 
-
+@fixMe
   Scenario Outline: Place order successfully
     When I select "<item1>","<item2>","<item3>"
     And I submit the order with all the required details
