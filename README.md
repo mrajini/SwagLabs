@@ -21,33 +21,32 @@ Page Object Model (POM) - Design pattern to organize code
 Clone the repo or Download the zip file
 `cd swag-labs-automation`
 
-#### Install dependencies: 
+## Install dependencies: 
 Run the following command to install dependencies:
 `mvn clean install`
 
-#### Configure properties: 
+## Configure properties: 
 Update config.properties file located in the src/main/resources directory with necessary configurations like browser type, base URL, and timeout settings.
 
-#### Running Tests
-
-##### Running All Tests
+## Running Tests
+### Running All Tests
 To run all tests using the default TestNG runner:
 `mvn test`
 
-##### Running Specific Scenarios
+### Running Specific Scenarios
 To run specific scenarios, use the Cucumber tags. For example:
 `mvn test -Dcucumber.options="--tags @Login"`
 
-##### Running Test Suites
+### Running Test Suites
 Regression Suite:
 `mvn test -Dtest=RegressionTest`
 Smoke Suite: 
 `mvn test -Dtest=SmokeTest`
 
-#### Browser Configuration
+### Browser Configuration
 You can change the browser from the command line by specifying a system property:
 `mvn test -Dbrowser=chrome`
 
-#### Test Reports
-##### Cucumber HTML Report
+## Test Reports
+### Cucumber HTML Report
 Cucumber generates a detailed report for each scenario, located in target/cucumber-reports.
