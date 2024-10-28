@@ -16,22 +16,6 @@ Maven - Build and dependency management tool
 Page Object Model (POM) - Design pattern to organize code
 
 ## Framework Structure
-
-|-- src
-|   |-- main
-|       |-- java
-|           |-- pages     # Page Object classes for each web page
-|           |-- utilities           # Utility classes like configuration, helper functions
-|   |-- test
-|       |-- java
-|           |-- stepDefs # Step definitions for Cucumber scenarios
-|           |-- testRunner         # Test runner classes for different suites
-|           |-- resources
-                |-- config
-|               |-- features    # Cucumber feature files
-|-- target                      # Folder for TestNG reports and logs
-|-- pom.xml                       # Maven POM file for dependencies
-|-- README.md                     # Project documentation`
 ![img.png](img.png)
 ## Clone the repository:
 Clone the repo or Download the zip file
