@@ -32,7 +32,7 @@ Page Object Model (POM) - Design pattern to organize code
 |-- target                      # Folder for TestNG reports and logs
 |-- pom.xml                       # Maven POM file for dependencies
 |-- README.md                     # Project documentation`
-
+![img.png](img.png)
 ## Clone the repository:
 Clone the repo or Download the zip file
 `cd swag-labs-automation`
