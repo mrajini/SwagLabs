@@ -1,4 +1,4 @@
-Feature: Home Functionality for SwagLabs E-commerce Website
+Feature: Inventory Functionality for SwagLabs E-commerce Website
 
   As a user of the Swag Labs website
   I want to be able to view and order the items displayed
@@ -9,7 +9,7 @@ Feature: Home Functionality for SwagLabs E-commerce Website
     And I have logged in successfully
 
     Scenario: View the details of the item selected
-      Given I am on the Swag Lab home page
+      Given I am on the Swag Lab inventory page
       When I click on the item image
       Then I should be navigated to item details page
       And I should see enabled "Back" and "ADD TO CART" buttons

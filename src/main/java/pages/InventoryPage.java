@@ -5,17 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utilities.Utils;
 
-public class HomePage extends Utils {
+public class InventoryPage extends Utils {
 private WebDriver driver;
     public double totalPrice = 0.0;
 
     private By item1 = By.cssSelector("#item_1_img_link > img");
     private By backButton = By.cssSelector("#inventory_item_container > div > button");
     private By addToCartButton = By.xpath("//*[text()=\"ADD TO CART\"]");
-    public HomePage(WebDriver driver){
+    public InventoryPage(WebDriver driver){
        this.driver = driver;
     }
-    public String homePageTitle(){
+    public String inventoryPageTitle(){
        return driver.getTitle();
 
     }

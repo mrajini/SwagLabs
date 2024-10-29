@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import pages.HomePage;
+import pages.InventoryPage;
 import pages.LoginPage;
 import utilities.Hooks;
 import static utilities.ConfigReader.prop;
@@ -14,12 +14,12 @@ public class LoginStepDefs {
 
     WebDriver driver;
     LoginPage loginPage;
-    HomePage homePage;
+    InventoryPage inventoryPage;
 
     public LoginStepDefs() {
         this.driver = Hooks.getDriver();
         this.loginPage = new LoginPage(driver);
-        this.homePage = new HomePage(driver);
+        this.inventoryPage = new InventoryPage(driver);
     }
 
     @Given("I am on the Swag Lab login page")
@@ -40,7 +40,7 @@ public class LoginStepDefs {
 
     @Then("I should be logged in successfully and see {string}")
     public void iShouldBeLoggedInSuccessfullyAndSee(String expectedTitle) {
-        String actualTitle = homePage.homePageTitle();
+        String actualTitle = inventoryPage.inventoryPageTitle();
         ;Assert.assertTrue(actualTitle.contains(expectedTitle),
                 "Expected title to contain: " + expectedTitle + " but found: " + actualTitle);
     }

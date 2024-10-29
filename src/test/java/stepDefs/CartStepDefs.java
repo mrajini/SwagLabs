@@ -5,21 +5,21 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.CartPage;
-import pages.HomePage;
+import pages.InventoryPage;
 import utilities.Hooks;
-import static stepDefs.HomeStepDefs.actualTotalPrice;
+import static stepDefs.InventoryStepDefs.actualTotalPrice;
 
 
 
 public class CartStepDefs {
     WebDriver driver;
     CartPage cartPage;
-    HomePage homePage;
+    InventoryPage inventoryPage;
 
     public CartStepDefs(){
         this.driver = Hooks.getDriver();
         this.cartPage = new CartPage(driver);
-        this.homePage = new HomePage(driver);
+        this.inventoryPage = new InventoryPage(driver);
     }
     @And("I navigate to checkout overview page")
     public void iNavigateToCheckoutOverviewPage() {
